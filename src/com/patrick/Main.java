@@ -23,6 +23,39 @@ public class Main {
         locations.put(4, new Location(4, "You are by a stream"));
         locations.put(5, new Location(5, "You are in a scary forest"));
 
+        //step 10
+        int loc = 1;
+        while(true){
+            System.out.println(locations.get(loc).getDesription());
+            if(loc == 0) {
+                break;
+            }
+
+            loc = scanner.nextInt();
+            if(!locations.containsKey(loc)){
+                System.out.println("You cannot go in that direction");
+
+                //run
+                /*
+                You are standing by a small building
+                1
+                You are standing by a small building
+                2
+                You are on a hill
+                3
+                You are inside a building
+                4
+                You are by a stream
+                5
+                You are in a scary forest
+                0
+                You are sitting in front of a computer learning Java
+                 */
+
+            }
+
+        }
+
     }
 
 }
