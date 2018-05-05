@@ -15,9 +15,11 @@ public class Location {
     public Location(int locationID, String desription) {
         this.locationID = locationID;
         this.desription = desription;
-
         //step 4 manually set our exits up
         this.exits = new HashMap<String, Integer>();
+        //step 14
+        this.exits.put("Q", 0);
+        //then back to main to run for step 15
     }
 
     //step 6 method for adding exits
