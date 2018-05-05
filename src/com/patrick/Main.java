@@ -53,27 +53,22 @@ public class Main {
                 break;
             }
 
-            loc = scanner.nextInt();
-            if(!locations.containsKey(loc)){
+            //step 12 directions
+            Map<String, Integer> exits = locations.get(loc).getExits();
+            System.out.print("Available exits are ");
+            for (String exit : exits.keySet()) {
+                System.out.print(exit + ", ");
+            }
+            System.out.println();
+
+            //step 13 scanner instance
+            String direction = scanner.nextLine().toUpperCase();
+
+            if (exits.containsKey(direction)) {
+                loc = exits.get(direction);
+            } else {
                 System.out.println("You cannot go in that direction");
-
                 //run
-                /*
-                You are standing by a small building
-                1
-                You are standing by a small building
-                2
-                You are on a hill
-                3
-                You are inside a building
-                4
-                You are by a stream
-                5
-                You are in a scary forest
-                0
-                You are sitting in front of a computer learning Java
-                 */
-
             }
 
         }
