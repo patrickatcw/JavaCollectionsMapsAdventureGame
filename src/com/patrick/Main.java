@@ -1,5 +1,5 @@
 package com.patrick;
-
+//based on Colossal Cave Adventure Game of the 70's
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -8,7 +8,6 @@ public class Main {
 
     //step 8 initializing hashmap
     private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
-
 
     public static void main(String[] args) {
 
@@ -24,7 +23,6 @@ public class Main {
         locations.put(5, new Location(5, "You are in a scary forest"));
 
         //step 11 want to add exits for each location
-        //for the game option for movement are limited to and from certain directions
         locations.get(1).addExit("W", 2);
         locations.get(1).addExit("E", 3);
         locations.get(1).addExit("S", 4);
@@ -46,16 +44,17 @@ public class Main {
         //locations.get(5).addExit("Q", 0);
         //step 13 commenting above lines out to not be so redundant
         //step 14 in location class
+
         //step 10
         int loc = 1;
-        while(true){
+        /*while (true) {
             System.out.println(locations.get(loc).getDesription());
-            if(loc == 0) {
+            if (loc == 0) {
                 break;
             }
 
             //step 12 directions
-            Map<String, Integer> exits = locations.get(loc).getExits();
+            Map<String, Integer> exits = locations.get(loc).getExits(); //returning actual location object
             System.out.print("Available exits are ");
             for (String exit : exits.keySet()) {
                 System.out.print(exit + ", ");
@@ -77,8 +76,22 @@ public class Main {
                 //good!
             }
 
+        }*/
+
+        //step 16 commented above out and put in....(note; split)
+        String[] road = "You are standing at the end of a road before a small brick building".split(" ");
+        for(String i : road){
+            System.out.println(i);
+        }
+
+        System.out.println("=====================================================");
+
+        String[] building = "You are inside a building, a well house for a small spring".split(" ");
+        for(String i : building){
+            System.out.println(i);
         }
 
     }
 
 }
+
